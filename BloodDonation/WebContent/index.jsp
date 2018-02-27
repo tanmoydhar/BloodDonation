@@ -12,13 +12,50 @@
 
 <s:form  action="loginUser">
 
-	<s:textfield label="Login Id" key="userId"></s:textfield>
+	<s:textfield label="Email" key="email"></s:textfield>
 	<s:password label="Password" key="password"></s:password>
-	<s:submit></s:submit>
+	<s:submit value="LOGIN"></s:submit>
 
 </s:form>
 
 <a href="registeration"> Register Here </a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3>---- Search for Doner -----</h3>
+<s:form  action="SearchDoner">
+
+	<s:textfield label="Blood Group" key="blood"></s:textfield>
+	<s:textfield label="State" key="state"></s:textfield>
+	<s:submit value="Search"></s:submit>
+
+</s:form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<s:form action="FetchRequest">
+<s:submit value="View Recent Requests"></s:submit>
+</s:form>
+<s:if test="noticeBoard != null">
+<h3>----- Blood Requests ------</h3>
+
+
+<s:iterator value="noticeBoard">
+   <s:property value="requestId"/><s:property value="email"/>  
+<s:property value="request"/>
+<br>
+</s:iterator>
+
+</s:if>
+
 
 </body>
 </html>

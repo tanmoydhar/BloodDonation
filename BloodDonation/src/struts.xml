@@ -7,18 +7,36 @@
 
 	<package name="default" extends="struts-default">
 			<action name="loginUser" class="com.redrops.action.Moderator" method="getLogin">
-			<result name="success">/success.jsp</result>
+			<result name="success">/Home.jsp</result>
 			<result name="error">/index.jsp</result>
 			</action>
 			
-			
-	</package>
-	<package name="logout" extends="struts-default" namespace="/">
-		<action name="logoutUser" class="com.redrops.action.Moderator" method="doLogout">
+			<action name="logoutUser" class="com.redrops.action.Moderator" method="doLogout">
 			<result name="success">/index.jsp</result>
 			</action>
-	
+			
+			<action name="RegisterUser" class="com.redrops.action.Moderator" method="doRegister">
+			<result name="success">/Operation.jsp</result>
+			</action>
+			
+			<action name="SearchDoner" class="com.redrops.action.Moderator" method="doSearchDoner">
+			<result name="success">/SearchResult.jsp</result>
+			</action>
+			
+			
+			<action name="PostRequest" class="com.redrops.action.Moderator" method="doPostRequest">
+			<result name="success">/Home.jsp</result>
+			</action>
+			
+			
+			<action name="FetchRequest" class="com.redrops.action.Moderator" method="doFetchRequest">
+			<result name="success">/index.jsp</result>
+			</action>
+			
+			
+			
 	</package>
+	
 	
 	<package name="redirection" extends="struts-default" namespace="/">
 			<action name="registeration" >

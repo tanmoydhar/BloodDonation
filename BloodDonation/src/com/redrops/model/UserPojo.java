@@ -1,11 +1,41 @@
 package com.redrops.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="user_detail")
 public class UserPojo {
-	private String name,email,gender,blood;
+	
+	@Id
+	private String email;
+	private String name;
+	private String gender;
+	private String blood;
 	private String password;
+	private String show;
+	private String state;
+	private String contact;
+	
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String isShow() {
+		return show;
+	}
+	public void setShow(String show) {
+		this.show = show;
+	}
 	public String getName() {
 		return name;
 	}
